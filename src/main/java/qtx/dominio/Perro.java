@@ -5,7 +5,6 @@ import java.io.StringReader;
 import jakarta.json.Json;
 import jakarta.json.JsonNumber;
 import jakarta.json.JsonObject;
-import jakarta.json.JsonObjectBuilder;
 import jakarta.json.JsonReader;
 import jakarta.json.JsonString;
 
@@ -73,12 +72,12 @@ public class Perro {
 		return this.toJsonObject().toString();
 	}
 	public JsonObject toJsonObject() {
-		JsonObjectBuilder builder = Json.createObjectBuilder();
-		builder.add("nombre", this.nombre)
-			   .add("raza", this.raza)
-			   .add("peso", Redondeador.redondear(this.peso, 1));
-		JsonObject objJson = builder.build();
-		return objJson;
+		JsonObject perroJson = Json.createObjectBuilder()
+				                   .add("nombre", this.nombre)
+				                   .add("raza", this.raza)
+				                   .add("peso", Redondeador.redondear(this.peso, 1))
+				                   .build();
+		return perroJson;
 	}
 	
 }

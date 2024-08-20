@@ -6,8 +6,6 @@ import java.util.List;
 import jakarta.json.Json;
 import jakarta.json.JsonArrayBuilder;
 import jakarta.json.JsonObject;
-import jakarta.json.JsonObjectBuilder;
-
 
 public class Manada {
 	private String nombre;
@@ -32,15 +30,16 @@ public class Manada {
 	}
 	
 	public JsonObject toJsonObject() {
-		JsonObjectBuilder builderManada = Json.createObjectBuilder();
 		JsonArrayBuilder builderPerros = Json.createArrayBuilder();
 		for(Perro perroI:this.perros) {
 			builderPerros.add(perroI.toJsonObject());
 		}
-		return builderManada.add("nombre", this.nombre)
-					 .add("perros", builderPerros)
-					 .build();
+		return Json.createObjectBuilder()
+				   .add("nombre", this.nombre)
+				   .add("perros", builderPerros)
+				   .build();
 	}
+	
 	public String toJson() {
 		return this.toJsonObject().toString();
 	}

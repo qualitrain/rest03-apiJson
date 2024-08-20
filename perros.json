@@ -1,10 +1,10 @@
 [
 {"nombre":"Pelitos","raza":"French poodle","peso":16.2},
-{"nombre":"Solovino","raza":"Pastor Inglés","peso":45.3},
+{"nombre":"Solovino","raza":"Pastor Ingles","peso":45.3},
 {"nombre":"Snoopy","raza":"Dalmata","peso":35.7},
 {"nombre":"Frijol","raza":"Doberman","peso":25.6},
 {"nombre":"Coffe","raza":"Puig","peso":6.9},
 {"nombre":"Jarrito","raza":"Beagle","peso":13.0},
 {"nombre":"Harry","raza":"Hooskie","peso":29.3},
-{"nombre":"Bombón","raza":"Alazka Malamut Gigante","peso":81.2}
+{"nombre":"Bombon","raza":"Alazka Malamut Gigante","peso":81.2}
 ]
