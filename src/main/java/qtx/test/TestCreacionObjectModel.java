@@ -9,16 +9,16 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.json.Json;
-import javax.json.JsonArray;
-import javax.json.JsonArrayBuilder;
-import javax.json.JsonObject;
-import javax.json.JsonObjectBuilder;
-import javax.json.JsonReader;
-import javax.json.JsonString;
-import javax.json.JsonStructure;
-import javax.json.JsonValue.ValueType;
-import javax.json.JsonWriter;
+import jakarta.json.Json;
+import jakarta.json.JsonArray;
+import jakarta.json.JsonArrayBuilder;
+import jakarta.json.JsonObject;
+import jakarta.json.JsonObjectBuilder;
+import jakarta.json.JsonReader;
+import jakarta.json.JsonString;
+import jakarta.json.JsonStructure;
+import jakarta.json.JsonValue.ValueType;
+import jakarta.json.JsonWriter;
 
 import qtx.dominio.Manada;
 import qtx.dominio.Perro;
@@ -36,7 +36,7 @@ public class TestCreacionObjectModel {
 			+ "\"peso\":36.5"
 			+ "},"
 			+ "{"
-			+ "\"nombre\":\"Fifí\","
+			+ "\"nombre\":\"Fifi\","
 			+ "\"raza\":\"French Poodle\","
 			+ "\"peso\":15.2"
 			+ "}"
@@ -70,17 +70,17 @@ public class TestCreacionObjectModel {
 			testParseoCadenaJson(PERROS_JSON);
 	}
 	private static void testCrearObjetoJson() {
-		System.out.println("\n================= Probando creación manual de JSon: =================");
+		System.out.println("\n================= Probando creacion manual de JSon: =================");
 		JsonObjectBuilder builder = Json.createObjectBuilder();
 		builder.add("nombre", "Firulais")
-			   .add("raza", "Dálmata")
+			   .add("raza", "Dalmata")
 			   .add("peso", 31.5);
 		JsonObject objJson = builder.build();
 		System.out.println("JSON:" + objJson.toString());
 	}
 
 	private static void testCrearObjetoJsonAnidado() {
-		System.out.println("\n======== Probando creación manual de JSon anidado: ========");
+		System.out.println("\n======== Probando creacion manual de JSon anidado: ========");
 		JsonObjectBuilder builderPerro = Json.createObjectBuilder();
 		builderPerro.add("nombre", "Esponja")
 			   .add("raza", "French Poodle")
@@ -97,11 +97,11 @@ public class TestCreacionObjectModel {
 	}
 	
 	private static void testCrearArregloJson() {
-		System.out.println("\n====== Probando creación manual de arreglo JSon: ======");
+		System.out.println("\n====== Probando creacion manual de arreglo JSon: ======");
 		JsonArrayBuilder builder = Json.createArrayBuilder();
 		builder.add("lunes")
 			   .add("martes")
-			   .add("miércoles")
+			   .add("miercoles")
 			   .add("jueves")
 			   .add("viernes");
 		JsonArray arregloJson = builder.build();
@@ -116,9 +116,9 @@ public class TestCreacionObjectModel {
 		
 	}
 	private static void testCrearObjetoJsonComplejo() {
-		System.out.println("\n====== Probando creación de objeto JSon complejo: ======");
+		System.out.println("\n====== Probando creacion de objeto JSon complejo: ======");
 		JsonObjectBuilder objNombreCompleto = Json.createObjectBuilder();
-		objNombreCompleto.add("apPaterno", "Sánchez")
+		objNombreCompleto.add("apPaterno", "Sanchez")
 					     .add("apMaterno","Mena")
 					     .add("nombres", Json.createArrayBuilder()
 					    		             .add("Jorge")
@@ -145,9 +145,9 @@ public class TestCreacionObjectModel {
 		
 	}
 	private static void testCrearObjetoJsonComplejo02() {
-		System.out.println("\n====== Probando creación de objeto JSon complejo 2: ======");
+		System.out.println("\n====== Probando creacion de objeto JSon complejo 2: ======");
 		Map<String,Object> mapaNomCompleto = new HashMap<>();
-		mapaNomCompleto.put("apPaterno", "Sánchez");
+		mapaNomCompleto.put("apPaterno", "Sï¿½nchez");
 		mapaNomCompleto.put("apMaterno", "Mena");
 		mapaNomCompleto.put("nombres", Arrays.asList("Jorge","Alberto") );
 
